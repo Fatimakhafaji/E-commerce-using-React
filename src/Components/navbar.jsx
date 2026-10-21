@@ -29,6 +29,9 @@ export default function Navbar() {
           <Link to={"/"} className="cursor-pointer ">Home</Link>
           <Link to={"/about"} className="cursor-pointer ">About</Link>
           <Link to={"/products" }className="cursor-pointer ">Products</Link>
+          {loggedIn && (
+            <Link to={'/addproduct'} className='cursor-pointer'>Add Product</Link>
+          )}
         </ul>
       </div>
       {/*center logo */}
@@ -67,6 +70,9 @@ export default function Navbar() {
           <Link to={"/"} className="cursor-pointer ">Home</Link>
           <Link to={"/about"} className="cursor-pointer ">About</Link>
           <Link to={"/products" }className="cursor-pointer ">Products</Link>
+           {loggedIn && (
+            <Link to={'/addproduct'} className='cursor-pointer'>Add Product</Link>
+          )}
         </ul>  
       )}        
     </nav>

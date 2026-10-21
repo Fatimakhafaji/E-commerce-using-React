@@ -6,6 +6,10 @@ import Login from './Pages/Login'
 import Navbar from './Components/navbar'
 import Footer from './Components/footer'
 import './App.css'
+import ProductDetails from './Pages/product';
+import AddProduct from './Pages/AddProduct'
+import User from './Pages/user'
+
 
 function App() {
   return (
@@ -15,7 +19,11 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
         <Route path='/products' element={<Products />} />
-       <Route path='/login' element={<Login />} /> 
+        <Route path='/product/:id' element={<ProductDetails/>}/>
+        <Route path='/login' element={<Login />} />
+        <Route path='/addproduct' element={<AddProduct/>}/> 
+        <Route path='/user' element={<User/>}/>
+
       </Routes>
       <Footer />
     </BrowserRouter>

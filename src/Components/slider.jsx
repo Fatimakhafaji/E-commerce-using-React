@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 
 
 const Slider = ({allproducts}) => {
@@ -19,7 +20,7 @@ const Slider = ({allproducts}) => {
     <div className='bg-[#f4f4f4] px-8 py-12'>
         <div className='flex gap-8'>
             {allproducts.slice(startIndex, startIndex +4).map((product)=>(
-                <div key={product.id} className='flex flex-col w-1/4'>
+                <Link to={`/product/${product.id}`} key={product.id} className='flex flex-col w-1/4'>
                     <div className='relative bg-white p-4 h-[450px] border border-gray-200 group cursor-pointer'>
                         <img src={product.image} alt={product.name} 
                         className='w-full h-[100%] object-contain transition-transform duration-300 group-hover:scale-105'/>
@@ -33,7 +34,7 @@ const Slider = ({allproducts}) => {
                     </div>
                     
                     <span className='text-sm font-medium'>${product.price.toFixed(2)}</span>
-                </div>
+                </Link>
             ))}
         </div>
         <div className='flex justify-center gap-4 mt-6'>
